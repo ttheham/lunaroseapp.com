@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Luna Rose – Mental Wellness App</title>
+  <meta name="description" content="Luna Rose is a gentle mental wellness app for teens and young adults—free AI chat, guided breathing, meditations, and grounding tools." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0f1020;--bg2:#171833;--text:#eef1ff;--muted:#c5cae9;--accent:#b388ff;--accent2:#80deea;}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:radial-gradient(1200px 800px at 10% 0%,#1a1b38,transparent),linear-gradient(180deg,#0f1020, #0d0e1b);}    
+    a{color:var(--accent2);text-decoration:none}
+    a:hover{text-decoration:underline}
+    header{position:sticky;top:0;background:rgba(15,16,32,.65);backdrop-filter:blur(10px);border-bottom:1px solid #23244a;z-index:10}
+    .wrap{max-width:980px;margin:0 auto;padding:18px}
+    .nav{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+    .nav a{font-weight:600}
+    .hero{padding:72px 18px 42px;display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid #2a2b58;border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    .card .in{padding:20px}
+    h1{font-size:42px;margin:0 0 8px}
+    h2{font-size:28px;margin:26px 0 12px}
+    h3{font-size:20px;margin:20px 0 8px}
+    p{line-height:1.6;color:var(--muted)}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;border:1px solid #3a3b72;background:#1a1b3a;color:var(--text);font-weight:700}
+    .btn:hover{transform:translateY(-1px)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}}
+    footer{border-top:1px solid #23244a;margin-top:48px}
+    .tiny{font-size:12px;color:#aeb3d6}
+    .pill{display:inline-block;padding:4px 10px;border-radius:999px;background:rgba(179,136,255,.18);color:#e6ddff;border:1px solid rgba(179,136,255,.35);font-size:12px;font-weight:700;letter-spacing:.3px}
+    .section{padding:24px 18px}
+    .anchor{scroll-margin-top:90px}
+    .list{margin:0 0 0 18px}
+    .muted{color:#c9cce9}
+    .legal h2{margin-top:36px}
+    .legal h3{margin-top:24px}
+    .banner{padding:10px 14px;border:1px solid #334;display:flex;gap:12px;border-radius:12px;background:#12122a}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <strong>Luna Rose</strong>
+      <nav style="margin-left:auto;display:flex;gap:16px;flex-wrap:wrap">
+        <a href="#about">About</a>
+        <a href="#download">Download</a>
+        <a href="#contact">Contact</a>
+        <a href="#privacy-policy">Privacy</a>
+        <a href="#terms">Terms</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero card">
+      <div class="in">
+        <span class="pill">Gentle mental wellness for teens & young adults</span>
+        <h1>Luna Rose: a calm space to breathe, reflect, and feel supported</h1>
+        <p>Talk to Luna (free and unlimited), track your mood, journal with guidance, and explore grounding tools and meditations. Luna Rose is designed to be simple, private, and supportive — not a replacement for professional care, but a helpful companion.</p>
+        <div class="cta">
+          <a class="btn" href="#download">Get the App</a>
+          <a class="btn" href="#about">Learn More</a>
+        </div>
+        <div class="banner" style="margin-top:16px">
+          <div>💜</div>
+          <div class="muted"><strong>Our promise:</strong> Talking to someone — even an AI — should never cost anything. Luna Rose chat is free and unlimited.</div>
+        </div>
+      </div>
+      <div class="in">
+        <div class="card" style="height:100%;display:flex;align-items:center;justify-content:center">
+          <div class="in">
+            <h3 style="margin-top:0">What’s inside</h3>
+            <ul class="list">
+              <li>Free AI chat with gentle, supportive tone</li>
+              <li>Guided breathing & grounding exercises</li>
+              <li>Music meditations & sleep sounds</li>
+              <li>CBT-inspired tools (reframing, worry box, gratitude)</li>
+              <li>Daily check-ins & soft badges</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
