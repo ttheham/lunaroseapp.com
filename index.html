@@ -52,14 +52,15 @@
   <header>
     <div class="wrap nav">
       <strong>Luna Rose</strong>
+      <!-- Updated nav: links to standalone pages -->
       <nav style="margin-left:auto;display:flex;gap:16px;flex-wrap:wrap">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#professional-help">Professional Help</a>
-        <a href="#contact">Contact</a>
-        <a href="#privacy-policy">Privacy</a>
-        <a href="#terms">Terms</a>
-        <a href="#affiliate-disclosure">Affiliate Disclosure</a>
+        <a href="/">Home</a>
+        <a href="/#about">About</a>
+        <a href="/#professional-help">Professional Help</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/affiliate-disclosure.html">Affiliate Disclosure</a>
       </nav>
     </div>
   </header>
@@ -73,7 +74,7 @@
         <p>Talk to Luna (free and unlimited), track your mood, journal with guidance, and explore grounding tools and meditations. Luna Rose is designed to be simple, private, and supportive — not a replacement for professional care, but a helpful companion.</p>
         <div class="cta">
           <a class="btn" href="#download">Get the App</a>
-          <a class="btn" href="#about">Learn More</a>
+          <a class="btn" href="/#about">Learn More</a>
         </div>
         <div class="banner" style="margin-top:16px">
           <div>💜</div>
@@ -99,7 +100,7 @@
     <!-- FEATURES PREVIEW -->
     <section id="about" class="section anchor">
       <div class="grid">
-        <div class="card"><div class="in"><h3>Private by design</h3><p>We don’t sell data. Conversations aren’t used to train models. Read our <a href="#privacy-policy">Privacy Policy</a>.</p></div></div>
+        <div class="card"><div class="in"><h3>Private by design</h3><p>We don’t sell data. Conversations aren’t used to train models. Read our <a href="/privacy.html">Privacy Policy</a>.</p></div></div>
         <div class="card"><div class="in"><h3>Grounding & calm</h3><p>5-4-3-2-1 senses, positive memory recall, and guided breathing help you reset fast.</p></div></div>
         <div class="card"><div class="in"><h3>CBT Corner</h3><p>Thought Reframe, Mood Trigger Tracker, Worry Box, and Gratitude Boost with saved history.</p></div></div>
       </div>
@@ -112,9 +113,9 @@
         <p class="muted">Currently in TestFlight while we polish the experience. App Store link coming soon.</p>
         <div class="cta">
           <a class="btn" href="#">Join TestFlight (invite)</a>
-          <a class="btn" href="#contact">Contact us</a>
+          <a class="btn" href="/contact.html">Contact us</a>
         </div>
-        <p class="tiny" style="margin-top:10px">Need support now? <a href="#professional-help">Find professional help</a> or call/text <strong>988</strong> in the U.S.</p>
+        <p class="tiny" style="margin-top:10px">Need support now? <a href="/#professional-help">Find professional help</a> or call/text <strong>988</strong> in the U.S.</p>
       </div>
     </section>
 
@@ -128,11 +129,11 @@
           <li>Talk to your primary care provider or a licensed therapist in your area.</li>
           <li>Check your insurance portal for in-network mental health providers.</li>
         </ul>
-        <p>We may include affiliate links to teletherapy services in the future. See our <a href="#affiliate-disclosure">Affiliate Disclosure</a>.</p>
+        <p>We may include affiliate links to teletherapy services in the future. See our <a href="/affiliate-disclosure.html">Affiliate Disclosure</a>.</p>
       </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- CONTACT (you can keep this or rely on /contact.html; both work) -->
     <section id="contact" class="section card anchor">
       <div class="in">
         <h2>Contact</h2>
@@ -155,7 +156,6 @@
           <label for="msg">Message</label>
           <textarea id="msg" name="message" rows="6" placeholder="How can we help?" required></textarea>
 
-          <!-- Optional helpers -->
           <input type="hidden" name="_subject" value="Luna Rose website contact">
           <input type="text" name="_gotcha" style="display:none">
           <input type="hidden" name="_next" value="https://lunaroseapp.com/?sent=1">
@@ -163,86 +163,25 @@
           <div style="margin-top:12px"><button class="btn" type="submit">Send</button></div>
           <p class="tiny">We use Formspree to deliver messages. Please don’t include sensitive health information.</p>
 
-          <!-- Success/Error messages -->
           <div id="contact-success" class="banner hide" style="margin-top:12px">✅ Thanks! Your message was sent.</div>
           <div id="contact-error" class="banner hide" style="margin-top:12px">⚠️ Sorry, something went wrong. Please email <a href="mailto:LunaroseAffiliate@gmail.com">LunaroseAffiliate@gmail.com</a>.</div>
         </form>
       </div>
     </section>
 
-    <!-- PRIVACY POLICY -->
-    <section id="privacy-policy" class="section card anchor legal">
-      <div class="in">
-        <h2>Privacy Policy</h2>
-        <p class="muted">We value your privacy. This policy explains what we collect and how we use it.</p>
-        <h3>Information We Collect</h3>
-        <ul class="list">
-          <li><strong>App data you save</strong> (mood entries, journals) is stored locally on your device. Deleting the app or clearing storage may remove this data.</li>
-          <li><strong>AI conversations</strong> are processed to respond to your messages. We do not sell your data. Conversations are <strong>not used to train models</strong>.</li>
-          <li><strong>Website analytics</strong> may be used to understand visits in a privacy-respecting way.</li>
-        </ul>
-        <h3>How We Use Information</h3>
-        <ul class="list">
-          <li>Provide and improve the app and website.</li>
-          <li>Respond to support requests.</li>
-          <li>Comply with legal obligations.</li>
-        </ul>
-        <h3>Data Sharing</h3>
-        <p>We do not sell personal data. Limited data may be shared with service providers strictly to operate the app/site.</p>
-        <h3>Children</h3>
-        <p>Luna Rose is designed for teens and young adults. If you are under 13, use only with a parent/guardian’s consent and follow local laws.</p>
-        <h3>Your Choices</h3>
-        <ul class="list">
-          <li>Delete locally stored app data from device settings or by reinstalling.</li>
-          <li>Contact us to request deletion of web form submissions.</li>
-        </ul>
-        <div class="banner"><strong>Not medical advice.</strong>&nbsp;Luna Rose provides self-help tools and educational content. It is not a substitute for professional diagnosis or treatment. If you are in immediate danger or considering self-harm, call or text <strong>988</strong> (U.S.) or your local emergency number.</div>
-        <p class="tiny">Last updated: August 11, 2025</p>
-      </div>
-    </section>
+    <!-- (Optional) You can remove these long legal sections now that you have standalone pages.
+         I left them off the homepage to keep it clean. -->
 
-    <!-- TERMS -->
-    <section id="terms" class="section card anchor legal">
-      <div class="in">
-        <h2>Terms of Use</h2>
-        <h3>Agreement</h3>
-        <p>By using Luna Rose (the “Service”), you agree to these Terms and our <a href="#privacy-policy">Privacy Policy</a>.</p>
-        <h3>License</h3>
-        <p>We grant you a personal, non-exclusive, revocable license to use the app and site.</p>
-        <h3>Health Disclaimer</h3>
-        <p>Luna Rose is not medical or mental-health treatment and does not provide diagnosis. Always seek advice from a qualified professional.</p>
-        <h3>Acceptable Use</h3>
-        <ul class="list">
-          <li>No unlawful or harmful use.</li>
-          <li>No attempts to interfere with or reverse engineer the Service.</li>
-          <li>No harassment, abuse, or exploitation of others.</li>
-        </ul>
-        <h3>Limitation of Liability</h3>
-        <p>To the extent permitted by law, Luna Rose is not liable for indirect or consequential damages arising from use of the Service.</p>
-        <h3>Changes</h3>
-        <p>We may update these Terms. Continued use constitutes acceptance of changes.</p>
-      </div>
-    </section>
-
-    <!-- AFFILIATE DISCLOSURE -->
-    <section id="affiliate-disclosure" class="section card anchor legal">
-      <div class="in">
-        <h2>Affiliate Disclosure</h2>
-        <p>Some links on this site may be affiliate links. If you click a link and sign up or make a purchase, we may earn a commission at no additional cost to you.</p>
-        <p>We only recommend products or services we genuinely believe can help our community. Our opinions are our own.</p>
-        <p>Questions? <a href="#contact">Contact us</a>.</p>
-      </div>
-    </section>
   </main>
 
   <footer>
     <div class="wrap tiny flex" style="justify-content:space-between">
       <div>© <span id="year"></span> Luna Rose.</div>
       <div class="links">
-        <a href="#affiliate-disclosure">Affiliate Disclosure</a>
-        <a href="#privacy-policy">Privacy</a>
-        <a href="#terms">Terms</a>
-        <a href="#contact">Contact</a>
+        <a href="/affiliate-disclosure.html">Affiliate Disclosure</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/contact.html">Contact</a>
       </div>
     </div>
   </footer>
@@ -251,13 +190,12 @@
     // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Contact form AJAX + user feedback
+    // Contact form AJAX + user feedback (homepage form)
     const form = document.getElementById('contact-form');
     const success = document.getElementById('contact-success');
     const errorBox = document.getElementById('contact-error');
 
     if (form) {
-      // Show success if redirected with ?sent=1 (fallback flow)
       if (new URLSearchParams(location.search).get('sent') === '1') {
         success?.classList?.remove('hide');
       }
