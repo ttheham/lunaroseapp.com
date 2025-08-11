@@ -3,15 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Luna Rose – Mental Wellness App</title>
+  <title>Luna Rose — Mental Wellness App</title>
   <meta name="description" content="Luna Rose is a gentle mental wellness app for teens and young adults—free AI chat, guided breathing, meditations, and grounding tools." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230f1020'/%3E%3Ccircle cx='34' cy='30' r='18' fill='%23b388ff' fill-opacity='.5'/%3E%3Cpath d='M42 20a14 14 0 1 1-14 24 16 16 0 1 0 14-24z' fill='%23fff' fill-opacity='.9'/%3E%3C/svg%3E" type="image/svg+xml">
   <style>
     :root{--bg:#0f1020;--bg2:#171833;--text:#eef1ff;--muted:#c5cae9;--accent:#b388ff;--accent2:#80deea;}
     *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:radial-gradient(1200px 800px at 10% 0%,#1a1b38,transparent),linear-gradient(180deg,#0f1020, #0d0e1b);}    
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:radial-gradient(1200px 800px at 10% 0%,#1a1b38,transparent),linear-gradient(180deg,#0f1020,#0d0e1b);}
     a{color:var(--accent2);text-decoration:none}
     a:hover{text-decoration:underline}
     header{position:sticky;top:0;background:rgba(15,16,32,.65);backdrop-filter:blur(10px);border-bottom:1px solid #23244a;z-index:10}
@@ -41,6 +43,8 @@
     .legal h2{margin-top:36px}
     .legal h3{margin-top:24px}
     .banner{padding:10px 14px;border:1px solid #334;display:flex;gap:12px;border-radius:12px;background:#12122a}
+    .flex{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+    .links{display:flex;gap:12px;flex-wrap:wrap}
   </style>
 </head>
 <body>
@@ -48,17 +52,20 @@
     <div class="wrap nav">
       <strong>Luna Rose</strong>
       <nav style="margin-left:auto;display:flex;gap:16px;flex-wrap:wrap">
+        <a href="#home">Home</a>
         <a href="#about">About</a>
-        <a href="#download">Download</a>
+        <a href="#professional-help">Professional Help</a>
         <a href="#contact">Contact</a>
         <a href="#privacy-policy">Privacy</a>
         <a href="#terms">Terms</a>
+        <a href="#affiliate-disclosure">Affiliate Disclosure</a>
       </nav>
     </div>
   </header>
 
   <main class="wrap">
-    <section class="hero card">
+    <!-- HOME -->
+    <section id="home" class="hero card anchor">
       <div class="in">
         <span class="pill">Gentle mental wellness for teens & young adults</span>
         <h1>Luna Rose: a calm space to breathe, reflect, and feel supported</h1>
@@ -87,3 +94,147 @@
         </div>
       </div>
     </section>
+
+    <!-- FEATURES PREVIEW -->
+    <section id="about" class="section anchor">
+      <div class="grid">
+        <div class="card"><div class="in"><h3>Private by design</h3><p>We don’t sell data. Conversations aren’t used to train models. Read our <a href="#privacy-policy">Privacy Policy</a>.</p></div></div>
+        <div class="card"><div class="in"><h3>Grounding & calm</h3><p>5-4-3-2-1 senses, positive memory recall, and guided breathing help you reset fast.</p></div></div>
+        <div class="card"><div class="in"><h3>CBT Corner</h3><p>Thought Reframe, Mood Trigger Tracker, Worry Box, and Gratitude Boost with saved history.</p></div></div>
+      </div>
+    </section>
+
+    <!-- DOWNLOAD -->
+    <section id="download" class="section card anchor">
+      <div class="in">
+        <h2>Get Luna Rose</h2>
+        <p class="muted">Currently in TestFlight while we polish the experience. App Store link coming soon.</p>
+        <div class="cta">
+          <a class="btn" href="#">Join TestFlight (invite)</a>
+          <a class="btn" href="#contact">Contact us</a>
+        </div>
+        <p class="tiny" style="margin-top:10px">Need support now? <a href="#professional-help">Find professional help</a> or call/text <strong>988</strong> in the U.S.</p>
+      </div>
+    </section>
+
+    <!-- PROFESSIONAL HELP -->
+    <section id="professional-help" class="section card anchor">
+      <div class="in">
+        <h2>Speak to a Professional</h2>
+        <p class="muted">Luna Rose is not a substitute for professional care. If you need more support, consider these options:</p>
+        <ul class="list">
+          <li><strong>In the U.S.:</strong> Call or text <strong>988</strong> for the Suicide & Crisis Lifeline.</li>
+          <li>Talk to your primary care provider or a licensed therapist in your area.</li>
+          <li>Check your insurance portal for in-network mental health providers.</li>
+        </ul>
+        <p>We may include affiliate links to teletherapy services in the future. See our <a href="#affiliate-disclosure">Affiliate Disclosure</a>.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section card anchor">
+      <div class="in">
+        <h2>Contact</h2>
+        <p class="muted">We love feedback and partnerships. Reach us here:</p>
+        <p><strong>Email:</strong> <a href="mailto:LunaroseAffiliate@gmail.com">LunaroseAffiliate@gmail.com</a></p>
+        <form action="https://formspree.io/f/mwkjnrqy" method="POST">
+          <div class="grid" style="grid-template-columns:1fr 1fr;gap:12px">
+            <div>
+              <label for="name">Name</label>
+              <input id="name" name="name" required />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" type="email" name="email" required />
+            </div>
+          </div>
+          <label for="msg">Message</label>
+          <textarea id="msg" name="message" rows="6" placeholder="How can we help?"></textarea>
+          <div style="margin-top:12px"><button class="btn" type="submit">Send</button></div>
+          <p class="tiny">We use Formspree to deliver messages. Please don’t include sensitive health information.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- PRIVACY POLICY -->
+    <section id="privacy-policy" class="section card anchor legal">
+      <div class="in">
+        <h2>Privacy Policy</h2>
+        <p class="muted">We value your privacy. This policy explains what we collect and how we use it.</p>
+        <h3>Information We Collect</h3>
+        <ul class="list">
+          <li><strong>App data you save</strong> (mood entries, journals) is stored locally on your device. Deleting the app or clearing storage may remove this data.</li>
+          <li><strong>AI conversations</strong> are processed to respond to your messages. We do not sell your data. Conversations are <strong>not used to train models</strong>.</li>
+          <li><strong>Website analytics</strong> may be used to understand visits in a privacy-respecting way.</li>
+        </ul>
+        <h3>How We Use Information</h3>
+        <ul class="list">
+          <li>Provide and improve the app and website.</li>
+          <li>Respond to support requests.</li>
+          <li>Comply with legal obligations.</li>
+        </ul>
+        <h3>Data Sharing</h3>
+        <p>We do not sell personal data. Limited data may be shared with service providers strictly to operate the app/site.</p>
+        <h3>Children</h3>
+        <p>Luna Rose is designed for teens and young adults. If you are under 13, use only with a parent/guardian’s consent and follow local laws.</p>
+        <h3>Your Choices</h3>
+        <ul class="list">
+          <li>Delete locally stored app data from device settings or by reinstalling.</li>
+          <li>Contact us to request deletion of web form submissions.</li>
+        </ul>
+        <div class="banner"><strong>Not medical advice.</strong>&nbsp;Luna Rose provides self-help tools and educational content. It is not a substitute for professional diagnosis or treatment. If you are in immediate danger or considering self-harm, call or text <strong>988</strong> (U.S.) or your local emergency number.</div>
+        <p class="tiny">Last updated: August 11, 2025</p>
+      </div>
+    </section>
+
+    <!-- TERMS -->
+    <section id="terms" class="section card anchor legal">
+      <div class="in">
+        <h2>Terms of Use</h2>
+        <h3>Agreement</h3>
+        <p>By using Luna Rose (the “Service”), you agree to these Terms and our <a href="#privacy-policy">Privacy Policy</a>.</p>
+        <h3>License</h3>
+        <p>We grant you a personal, non-exclusive, revocable license to use the app and site.</p>
+        <h3>Health Disclaimer</h3>
+        <p>Luna Rose is not medical or mental-health treatment and does not provide diagnosis. Always seek advice from a qualified professional.</p>
+        <h3>Acceptable Use</h3>
+        <ul class="list">
+          <li>No unlawful or harmful use.</li>
+          <li>No attempts to interfere with or reverse engineer the Service.</li>
+          <li>No harassment, abuse, or exploitation of others.</li>
+        </ul>
+        <h3>Limitation of Liability</h3>
+        <p>To the extent permitted by law, Luna Rose is not liable for indirect or consequential damages arising from use of the Service.</p>
+        <h3>Changes</h3>
+        <p>We may update these Terms. Continued use constitutes acceptance of changes.</p>
+      </div>
+    </section>
+
+    <!-- AFFILIATE DISCLOSURE -->
+    <section id="affiliate-disclosure" class="section card anchor legal">
+      <div class="in">
+        <h2>Affiliate Disclosure</h2>
+        <p>Some links on this site may be affiliate links. If you click a link and sign up or make a purchase, we may earn a commission at no additional cost to you.</p>
+        <p>We only recommend products or services we genuinely believe can help our community. Our opinions are our own.</p>
+        <p>Questions? <a href="#contact">Contact us</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap tiny flex" style="justify-content:space-between">
+      <div>© <span id="year"></span> Luna Rose.</div>
+      <div class="links">
+        <a href="#affiliate-disclosure">Affiliate Disclosure</a>
+        <a href="#privacy-policy">Privacy</a>
+        <a href="#terms">Terms</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
