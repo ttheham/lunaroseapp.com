@@ -139,8 +139,8 @@
         <p class="muted">We love feedback and partnerships. Reach us here:</p>
         <p><strong>Email:</strong> <a href="mailto:LunaroseAffiliate@gmail.com">LunaroseAffiliate@gmail.com</a></p>
 
-        <!-- Replace YOUR_FORMSPREE_ID below with your real ID -->
-        <form id="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+        <!-- Live Formspree endpoint -->
+        <form id="contact-form" action="https://formspree.io/f/xjkolbag" method="POST">
           <div class="grid" style="grid-template-columns:1fr 1fr;gap:12px">
             <div>
               <label for="name">Name</label>
@@ -165,7 +165,6 @@
           <!-- Success/Error messages -->
           <div id="contact-success" class="banner hide" style="margin-top:12px">✅ Thanks! Your message was sent.</div>
           <div id="contact-error" class="banner hide" style="margin-top:12px">⚠️ Sorry, something went wrong. Please email <a href="mailto:LunaroseAffiliate@gmail.com">LunaroseAffiliate@gmail.com</a>.</div>
-          <div id="contact-setup" class="banner hide" style="margin-top:12px">⚠️ Form not set up yet. Replace <strong>YOUR_FORMSPREE_ID</strong> in the form action after you verify your email.</div>
         </form>
       </div>
     </section>
@@ -251,18 +250,13 @@
     // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Contact form behavior (AJAX + helpful messages)
+    // Contact form AJAX + user feedback
     const form = document.getElementById('contact-form');
     const success = document.getElementById('contact-success');
     const errorBox = document.getElementById('contact-error');
-    const setup = document.getElementById('contact-setup');
 
-    // If user hasn't replaced the placeholder, show setup warning and disable submit
-    if (form && form.action.includes('YOUR_FORMSPREE_ID')) {
-      setup.classList.remove('hide');
-      form.addEventListener('submit', (e) => e.preventDefault());
-    } else if (form) {
-      // Show success if redirected with ?sent=1
+    if (form) {
+      // Show success if redirected with ?sent=1 (fallback flow)
       if (new URLSearchParams(location.search).get('sent') === '1') {
         success.classList.remove('hide');
       }
@@ -279,7 +273,6 @@
             form.reset();
             errorBox.classList.add('hide');
             success.classList.remove('hide');
-            // remove query params if any
             history.replaceState(null, '', location.pathname);
           } else {
             success.classList.add('hide');
