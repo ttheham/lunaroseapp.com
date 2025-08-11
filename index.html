@@ -45,6 +45,7 @@
     .banner{padding:10px 14px;border:1px solid #334;display:flex;gap:12px;border-radius:12px;background:#12122a}
     .flex{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
     .links{display:flex;gap:12px;flex-wrap:wrap}
+    .hide{display:none}
   </style>
 </head>
 <body>
@@ -137,7 +138,9 @@
         <h2>Contact</h2>
         <p class="muted">We love feedback and partnerships. Reach us here:</p>
         <p><strong>Email:</strong> <a href="mailto:LunaroseAffiliate@gmail.com">LunaroseAffiliate@gmail.com</a></p>
-        <form action="https://formspree.io/f/mwkjnrqy" method="POST">
+
+        <!-- Replace YOUR_FORMSPREE_ID below with your real ID -->
+        <form id="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
           <div class="grid" style="grid-template-columns:1fr 1fr;gap:12px">
             <div>
               <label for="name">Name</label>
@@ -145,13 +148,24 @@
             </div>
             <div>
               <label for="email">Email</label>
-              <input id="email" type="email" name="email" required />
+              <input id="email" type="email" name="_replyto" required />
             </div>
           </div>
           <label for="msg">Message</label>
-          <textarea id="msg" name="message" rows="6" placeholder="How can we help?"></textarea>
+          <textarea id="msg" name="message" rows="6" placeholder="How can we help?" required></textarea>
+
+          <!-- Optional helpers -->
+          <input type="hidden" name="_subject" value="Luna Rose website contact">
+          <input type="text" name="_gotcha" style="display:none">
+          <input type="hidden" name="_next" value="https://lunaroseapp.com/?sent=1">
+
           <div style="margin-top:12px"><button class="btn" type="submit">Send</button></div>
           <p class="tiny">We use Formspree to deliver messages. Please don’t include sensitive health information.</p>
+
+          <!-- Success/Error messages -->
+          <div id="contact-success" class="banner hide" style="margin-top:12px">✅ Thanks! Your message was sent.</div>
+          <div id="contact-error" class="banner hide" style="margin-top:12px">⚠️ Sorry, something went wrong. Please email <a href="mailto:LunaroseAffiliate@gmail.com">LunaroseAffiliate@gmail.com</a>.</div>
+          <div id="contact-setup" class="banner hide" style="margin-top:12px">⚠️ Form not set up yet. Replace <strong>YOUR_FORMSPREE_ID</strong> in the form action after you verify your email.</div>
         </form>
       </div>
     </section>
@@ -234,7 +248,49 @@
   </footer>
 
   <script>
+    // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Contact form behavior (AJAX + helpful messages)
+    const form = document.getElementById('contact-form');
+    const success = document.getElementById('contact-success');
+    const errorBox = document.getElementById('contact-error');
+    const setup = document.getElementById('contact-setup');
+
+    // If user hasn't replaced the placeholder, show setup warning and disable submit
+    if (form && form.action.includes('YOUR_FORMSPREE_ID')) {
+      setup.classList.remove('hide');
+      form.addEventListener('submit', (e) => e.preventDefault());
+    } else if (form) {
+      // Show success if redirected with ?sent=1
+      if (new URLSearchParams(location.search).get('sent') === '1') {
+        success.classList.remove('hide');
+      }
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const data = new FormData(form);
+        try {
+          const res = await fetch(form.action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          });
+          if (res.ok) {
+            form.reset();
+            errorBox.classList.add('hide');
+            success.classList.remove('hide');
+            // remove query params if any
+            history.replaceState(null, '', location.pathname);
+          } else {
+            success.classList.add('hide');
+            errorBox.classList.remove('hide');
+          }
+        } catch {
+          success.classList.add('hide');
+          errorBox.classList.remove('hide');
+        }
+      });
+    }
   </script>
 </body>
 </html>
