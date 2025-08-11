@@ -148,9 +148,10 @@
             </div>
             <div>
               <label for="email">Email</label>
-              <input id="email" type="email" name="_replyto" required />
+              <input id="email" type="email" name="email" required />
             </div>
           </div>
+
           <label for="msg">Message</label>
           <textarea id="msg" name="message" rows="6" placeholder="How can we help?" required></textarea>
 
@@ -258,7 +259,7 @@
     if (form) {
       // Show success if redirected with ?sent=1 (fallback flow)
       if (new URLSearchParams(location.search).get('sent') === '1') {
-        success.classList.remove('hide');
+        success?.classList?.remove('hide');
       }
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -271,16 +272,16 @@
           });
           if (res.ok) {
             form.reset();
-            errorBox.classList.add('hide');
-            success.classList.remove('hide');
+            errorBox?.classList?.add('hide');
+            success?.classList?.remove('hide');
             history.replaceState(null, '', location.pathname);
           } else {
-            success.classList.add('hide');
-            errorBox.classList.remove('hide');
+            success?.classList?.add('hide');
+            errorBox?.classList?.remove('hide');
           }
         } catch {
-          success.classList.add('hide');
-          errorBox.classList.remove('hide');
+          success?.classList?.add('hide');
+          errorBox?.classList?.remove('hide');
         }
       });
     }
